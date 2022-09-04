@@ -1,5 +1,6 @@
 import React from 'react';
-import {Dimensions, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import { dimensions, colors } from '../Theme';
 
 const Button = props => {
   return (
@@ -7,6 +8,7 @@ const Button = props => {
       style={[styles.Button, props.containerStyle]}
       disabled={props.disabled}
       onPress={props.onPress}
+      {...props}
       >
       <Text style={[styles.text, props.textStyle]}>{props.text}</Text>
     </TouchableOpacity>
@@ -17,17 +19,17 @@ export default Button;
 
 const styles = StyleSheet.create({
   Button: {
-    backgroundColor: '#1d4354',
+    backgroundColor:colors.blue,
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 5,
-    width: Dimensions.get('window').width - 150,
+    width: dimensions.width-200,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
-    color: '#fff',
+    color: colors.white,
     fontSize: 18,
   },
 });
