@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <View>
       <Text>Login</Text>
-      <Button text = "Login" />
+      <Button text = "Login"  />
     </View>
   )
 }
